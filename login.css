@@ -1,0 +1,109 @@
+.login .title{
+    text-align: center;
+    width: 250px;
+    padding-top: 10vh;
+    margin: auto;
+}
+.login .title h1{
+    font-size: 1.5rem;
+    color: #8dccf2;
+}
+.login .title p{
+    font-size: .9rem;
+    padding-top: 10px;
+    color: #acacac;
+
+}
+.login .img img{
+    height: 200px;
+    
+}
+.login .img{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.login .button{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.login .button button{
+    all: unset;
+    background-color: #79a0e2;
+    padding: 12px  30px;
+    outline: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+.login .or p{
+    color: #acacac;
+    position: relative;
+}
+.login .or{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    
+}
+.login .or p:before{
+        content: "";
+        width: 100px;
+        height: 2px;
+        background-color: #e3e3e3;
+        position: absolute;
+        border-radius: 8px;
+        left:30px;
+        transform: translatey(-50%);
+        top:60%;
+}
+.login .or p:after{
+    content: "";
+        width: 100px;
+        height: 2px;
+        background-color: #e3e3e3;
+        position: absolute;
+        border-radius: 8px;
+        right:30px;
+        transform: translatey(-50%);
+        top:60%;
+}
+.login .mail button img,.choose-number .mail button img{
+    height: 18px;
+}
+.login .mail,.choose-number .mail{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.login .mail button,.choose-number .mail button{
+    all: unset;
+    border: 1px solid #e3e3e3;
+    display: flex;
+    gap: 5px;
+    border-radius: 10px;
+    padding: 8px  28px;
+    cursor: pointer;
+    align-items: center;
+    cursor: pointer;
+}
+.login .mail button p,.choose-number .mail button p{
+    font-size: 0.8rem;
+}
+.login .footer p{
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 20px;
+    color: #acacac;
+}
+.login .footer p span{
+    text-decoration: underline;
+
+}
+.login .footer p span:hover{
+    color: #79a0e2;    
+    cursor: pointer;
+}
+

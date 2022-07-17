@@ -1,0 +1,110 @@
+.hide{
+    display: none;
+    }
+    .show{
+        display: block;
+    }
+    .flex{
+        display: flex;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Ubuntu', sans-serif;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    body{
+        background: url(assets/images/background.jpg) no-repeat ;
+        background-size: cover;
+        height: 100vh;
+    }
+    .container{
+        background-color: white;
+        width: 360px;
+        height: 640px;
+        transform: translate(-50%,-50%);
+        position: relative;
+        top:50%;
+        left:50%;
+    }
+    /* .top-bar{
+        display: flex;
+        color: rgb(50, 50, 50);
+        position: absolute;
+        height: 25px;
+    }
+    .top-bar i{
+        padding-left: 3px;
+    } */
+    .cover-img{
+        display: none;
+        /* border-right: 1px solid #acacac; */
+    }
+
+    .box-grid{
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 30px;
+        justify-content: space-around;
+       margin: 20px 100px;
+    }
+    .home .header{
+        align-items: center;
+        padding: 10px 60px;
+    }
+   
+    @media screen and (min-width:786px) {
+    
+        .container{
+            width: 85%;
+            border-radius: 40px;
+
+        }
+        .login{
+            align-items: center;
+            height: 640px;
+           justify-content: space-around;
+            
+        }
+        .cover-img{
+            display: block;
+        }
+        .choose-number .bg,.verify-otp .bg{
+         
+           border-radius: 40px;
+        }
+        .choose-number .bg,.verify-otp .bg{
+           width: 85vw;
+        }
+
+        
+    }
+    @media screen and (min-width:860px) {
+        .box-grid{
+            grid-template-columns: 1fr 1fr;
+
+        }
+        .home .header{
+            display: flex;
+        }
+        .home .header-inner{
+            margin-top: 0px;
+    
+        }
+        .home .box{
+            width: 260px;
+            height: 160px;
+            border-radius: 20px;
+            padding: 20px;
+
+        }
+    }
+    @media screen and (min-width:1280px) {
+        .box-grid{
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+        
+       
+    }

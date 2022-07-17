@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Van | Get Fresh Milk On Door Step</title>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">     
+    
+    
+    <link rel="icon" href="assets/images/favicon.png">
+    
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="preloader.css">
+    <link rel="stylesheet" href="choosenumber.css">
+    <link rel="stylesheet" href="main.css">
+
+
+
+<style>
+   .home,.product{
+    width: 100vw;
+    height: auto;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+     background: linear-gradient(to left, #e0eafc, #cfdef3);
+     /* background: linear-gradient(to left, #c0c0aa, #1cefff); */
+    }
+    
+     .nav-footer{
+        display: flex;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        transform: translateX(-50%);
+        left:50%;
+        cursor: pointer;
+        background-color: rgb(0,0,0,0.8) ;
+        justify-content: center;
+    }
+    .nav-footer i{
+color: #ef1162;
+font-size: 1.3rem;
+    }
+    .nav-footer p{
+        color: white;
+        padding-top: 10px;
+    }
+     .nav-footer div{
+       padding: 15px 20px; 
+    }
+    .box,.home .box{
+        width: 280px;
+        height: auto;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+       position: relative;
+    }
+    
+     .box h3{
+        font-size: 0.8rem;
+        color: white;
+    }
+     .box h2{
+        font-size: 1rem;
+        color: white;
+    }
+     .box button{
+        all: unset;
+    background-color: #79a0e2;
+    padding: 8px  15px;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+        width: 80px;
+        text-align: center;
+        margin-top: 15px;
+        position: relative;
+        left: 120px;
+        background: linear-gradient(to top, #ec008c, #fc6767); 
+    }
+     .box span:hover{
+        color: black;
+    }
+    .product .box img{
+        height:120px;width: 240px;
+    }
+ 
+     
+    .none{
+        display: none;
+    }
+     .tr h3{
+        position: absolute;
+        left: 130px;
+     }
+    .tr img{
+        height: 100px;
+        position: absolute;
+        right: -30px;
+        top:-30px;
+        transform: scale(0.3);
+        padding: 10px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #56ccf2, #2f80ed);
+        /* margin-left: 15px; */
+     }
+     .tr {
+        display: flex;
+        border-radius: 40px;
+        height:30px;
+        margin-top: 15px;
+        align-items: center;
+        background: linear-gradient(to left, #fcdb88, #f8b500);
+        padding: 20px;
+        position: relative;
+     }
+     .tr h2{
+        position: absolute;
+        left: 10px;
+     }
+     .tr span{
+        position: absolute;
+        left:100px;
+        color: white;
+        background-color: #24c6dc;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 1rem;
+        cursor: pointer;
+     }
+     .tr label{
+        position: absolute;
+        left: 175px;
+        color: white;
+        background-color: #24c6dc;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 1rem;
+        cursor: pointer;
+
+     }
+     
+.add-order .bg,.home-box .bg{
+    background: rgba(0,0,0,0.5);
+   height: 100vh;
+   width: 100vw;
+}
+
+.add-order,.home-box{
+    position: fixed;
+    top:0;
+    left: 0;
+
+}
+.add-order .box,.home-box .box{
+    width: 300px;
+    height: 260px;
+    background-color: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 20PX;
+    transform: translate(-50%,-50%);
+    text-align: center;
+   padding: 30px;
+}
+.add-order .box button{
+    all: unset;
+    background-color: #79a0e2;
+padding: 12px  30px;
+outline: none;
+color: white;
+border-radius: 10px;
+font-size: 0.8rem;
+cursor: pointer;
+}
+.header h1 {
+    color: #2f80ed;
+    font-size: 1.5rem;
+
+}
+.header h2 ,.header span{
+    color: rgb(0,0,0,0.5);
+    font-size: 1.5rem;
+}
+
+.header{
+    /* background: linear-gradient(to right, #56ccf2, #2f80ed); */
+}
+
+.due{
+    font-size: 2rem;
+    color:white; 
+    font-weight: 500;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 40px;
+
+    background: linear-gradient(to left, #fceabb, #f8b500)
+    
+}
+
+/* select{
+    all: unset;
+} */
+
+
+
+</style>
+</head>
+<body>
+    <div class="pre-loader    ">
+        <p>Milk Van</p>
+        <img src="assets/images/milk-truck-just-arrive.gif" width="250px" alt="">
+    </div>
+    <div class="container">
+        
+
+        <!-- <div class="top-bar">
+            <div style="padding-left: 5px;">
+                <p>6:30 AM</p>
+            </div>
+           <div style="margin-left: 180px;padding-right: 5px;">
+            <i class="bi bi-wifi"></i>
+            <i class="bi bi-alarm"></i>
+            <i class="bi bi-reception-4"></i>
+            <i class="bi bi-reception-4"></i>
+            <i class="bi bi-battery-half"></i>
+           </div>
+        </div> -->
+        
+        <div class="login flex hide" id="login">
+            <div  class="cover-img" style=" ">
+                <img src="assets/images/istockphoto-1303862690-170667a-1.jpg" width="400px" alt="">
+            </div>
+            
+            <div style="  border-left: 1px solid lightblue; " >
+                <div class="title">
+                    <h1>Welcome</h1>
+                    <p>Milk Van provides the best Dairy Products Fresh & Tasty</p>
+                </div>
+                <div class="img">
+                    <img src="assets/images/hero.png" alt="">
+                </div>
+                <div class="button" id="chooseMobile">
+                    <button>Continue with the mobile number</button>
+                </div>
+                <div class="or">
+                    <p>or</p>
+                </div>
+                <div class="mail">
+                    <button>
+                        <img src="assets/images/google.png" alt="">
+                        <p>Google</p>
+                    </button>
+                    <button>
+                        <img src="assets/images/apple.png" alt="">
+                        <p>Apple</p>
+                    </button>
+                </div>
+                <div class="footer">
+                    <p>By continuing, you agree to Milk Van's <span>Terms of Use</span> Read our <span>Privacy Policy</span></p>
+                </div>
+            </div>
+        </div>
+       
+        <!-- <div class="choose-number hide" id="chooseNumber">
+            <div class="bg" id="chooseNumberBg"></div>
+            <div class="content">
+            <img src="assets/images/favicon.png" width="80px" alt="">
+            <p>Choose a Number</p>
+            <div class="item">
+                <img src="" alt="">
+                <p>+91 54158 51547</p>
+            </div>
+            <div class="item">
+                <img src="" alt="">
+                <p>+91 54158 51547</p>
+            </div>
+            <p>Choose Other options</p>
+            <div class="mail">
+                <button>
+                    <img src="assets/images/google.png" alt="">
+                    <p>Google</p>
+                </button>
+                <button>
+                    <img src="assets/images/apple.png" alt="">
+                    <p>Apple</p>
+                </button>
+            </div>
+        </div>
+        </div> -->
+       
+
+        <div class="choose-number hide " id="chooseNumber">
+            <div class="bg" id="chooseNumberBg"></div>
+            <div class="box">
+                <h2 style="color: black; font-size: 1.5rem;" >Please enter Mobile Number</h2> 
+                <form id="loginButton"><input type="text" placeholder="Enter 10 digit Mobile No" id="mno" autocomplete="off">
+                <p class="err" style="margin-top: 15px; color:red; font-style: italic; font-size: 0.8rem;"></p>
+                <button  type="submit" style="margin-top: 20px;">Login</button></form>
+            </div>
+        </div>
+        
+        <div class="verify-otp hide" id="verifyOtp">
+            <div class="bg"></div>
+            <div class="box">
+                <h2 style="color: black; font-size: 1.5rem;"> Please enter OTP</h2>
+                <span style="color: rgb(0,0,0,0.5); font-size:1rem;">Sent to Your mobile number</span> 
+                <form id="verify" style="margin-top: 15px;"><input type="number" placeholder="Enter 4 digit OTP" id="votp" autocomplete="off">
+                    <p class="err1" style="margin-top: 15px; color:red;font-style: italic; font-size: 0.8rem;"></p>
+                <button type="submit" style="margin-top: 20px;">Verify OTP</button></form>
+            </div>
+        </div>
+
+        
+
+    </div>
+    <div class="home  hide Tab" id="home">
+
+        <div class="header">
+            <div>
+                <h2> Welcome </h2>
+                <h1> <span>Back,</span>  <span class="hname" style="color: #2f80ed;">Murugan</span>!</h1>
+            
+            </div>
+            <!-- <div class="header-inner">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Vadapalani Chennai.</p>
+                <i class="fa-solid fa-file-csv"></i>
+                <p style="cursor: pointer;">Download report</p>
+            </div> -->
+        </div>
+        
+        <div class="box-grid">
+            <div class="box" style="background: linear-gradient(to right, #5f2c82, #49a09d);">
+                 <h2>Due Balance</h2>
+                <p class="due" > <i class="fa-solid fa-indian-rupee-sign" style="font-size: 1.5rem;"></i> 1544 <i class="fa-solid fa-wallet" style="background: linear-gradient(to right, #56ccf2, #2f80ed); font-size: 1.5rem;  padding: 10px; border-radius: 50%; margin-left: 70px;"></i></p>
+                <h3 >Above balance is due from your last paid day*</h3>
+                <button >Clear Due</button>
+            </div>
+            <div class="box" style=" background: linear-gradient(to left, #00c9ff, #92fe9d); " >
+                <h2>Profile</h2>
+                <div class="tr pcolor" >
+                    <input type="text" class="p-input" value="Murugan" readonly="readonly" style="all: unset; color: white;"> 
+                    <img src="assets/images/user.png"  alt="">
+
+               </div>
+               <div class="tr  pcolor" >
+                <input type="text" class="p-input" value="84587 99844" readonly="readonly" style="all: unset; color: white;"> 
+                <img src="assets/images/phone-call.png"  alt="">
+                 </div>
+                 <div class="tr  pcolor"style="height: 100px;" >
+                <textarea class="p-input" name="" id="" style="all: unset; color:white;" readonly="readonly" cols="12" rows="4">No.4,3rd cross street,  Ambal nagar, vadapalani, chennai -98</textarea>
+            <img src="assets/images/placeholder.png" style="top: -9px"  alt="">
+
+                </div>
+                <button class="p-edit">Edit</button>  
+            </div>
+            <div class="box"  style="background: linear-gradient(to right, #fc354c, #0abfbc); ">
+                <h2>Complaint Or Feedback</h2>
+                <div style="margin-top: 20px;">
+                    <input type="text" placeholder="Subject" style="padding: 10px; width: 100%;margin-bottom: 5px; font-size: 1rem;" >
+                    
+                    <textarea name="" id="" cols="18" rows="5" placeholder="Describe Your Subject" style="padding: 5px;"></textarea></div>
+                    <div class="tr" style="background: #191654;cursor: pointer;" >
+                        <h2>Contact us now</h2>
+            <img src="assets/images/contact.png"  alt="">
+
+                         </div>
+                <button onclick="homeBox(0)" >Submit</button>
+            </div>
+            <div class="box"  style=" background: linear-gradient(to left, #24c6dc, #514a9d); ">
+                <h2> Tomorrow's Delivery</h2>
+               
+                <div id="t-list">
+                    
+                    <div class="tr ttr"  >
+                        <h2 class="item">Milk</h2>
+                        <h3 class="qty">500ml</h3>
+                        <img src="assets/images/milk-bottle.png"  alt="">
+
+                   </div>
+                   <div class="tr ttr" >
+                    <h2 class="item">Curd</h2>
+                    <h3 class="qty">200ml</h3>
+                    <img src="assets/images/curd icon.jpg"  alt="">
+                        </div>
+                                
+                </div>
+                <button class="t-list-edit" >Edit Order</button>
+            </div>
+            <div class="box"  style="  background: linear-gradient(to right, #ef32d9, #89fffd); ">
+                <h2>Daily Orders</h2>
+                <div id="d-list">
+                    <div class="tr dtr" >
+                        <h2>Milk</h2>
+                        <h3>500ml</h3>
+                        <img src="assets/images/milk-bottle.png"  alt="">
+    
+                   </div>
+                   <div class="tr dtr" >
+                    <h2>Curd</h2>
+                    <h3>200ml</h3>
+                    <img src="assets/images/curd icon.jpg"  alt="">
+                        </div>
+              
+                </div>
+                <button class="d-list-edit">Edit Order</button>  
+            </div>
+            <div class="box" style="background: linear-gradient(to left, #9d50bb, #6e48aa); " >
+                <h2>Monthly Report</h2>
+                <div class="tr" >
+                    <h2>Milk</h2>
+                    <h3>500ml</h3>
+                    <img src="assets/images/milk-bottle.png"  alt="">
+                    <!-- <img src="assets/images/remove.png" style="padding: 5px;" alt=""> -->
+
+               </div>
+               <div class="tr" >
+                <h2>Curd</h2>
+                <h3>200ml</h3>
+                <img src="assets/images/curd icon.jpg"  alt="">
+                    </div>
+           <div class="tr" >
+            <h2>Ghee</h2>
+            <h3>500ml</h3>
+            <img src="assets/images/ghee icon.jpg"  alt="">
+            </div>
+                <button>Report</button> 
+            </div>
+           
+        </div>
+        <div style="padding: 70px;" >
+        </div>
+        <div>
+    </div>
+</div>
+   
+    <div class="home-box hide" >
+        <div class="bg" id="home-box-bg"></div>
+            <div class="box "  ><h2 style="margin-top: 15px;color: #191654;" >Thank for Feedback </h2> <p style="margin-top: 50px; font-size: 2.5rem; color:#ef1162"> Submitted !</p> </div>
+        </div>
+    </div>
+
+
+    <div class="product  hide Tab " id="product">
+          <div class="header" style="padding: 10px 30px 0 30px;">
+            <h1 style="color:#ef1162 ;">Products, <br> We Provide</h1>
+            </div>
+        <div class="box-grid">
+            <div class="box" style="  background: linear-gradient(to right, #5614b0, #dbd65c);" >
+                <img src="assets/images/milk.jpg"  alt="">
+                <h4 style="color: white; margin-top: 5px;">Milk</h4>
+                <h5 style="color: white;">500ml Only Rs 26</h5>
+               <button onclick="orderBox(0)" style="left: 0px;">Add to Order</button>
+           </div>
+           <div class="box" style="   background: linear-gradient(to right, #16a085, #f4d03f); ">
+            <img src="assets/images/yogurt.jpg"  alt="">
+                <h4 style="color: white; margin-top: 5px;">Curd</h4>
+                <h5 style="color: white;">200ml Only Rs 15</h5>
+           <button onclick="orderBox(1)" style="left: 0px;">Add to Order</button>
+          </div>
+          <div class="box" style="   background: linear-gradient(to left, #43c6ac, #191654);   ">
+            <img src="assets/images/butter.jpg"  alt="">
+                <h4 style="color: white; margin-top: 5px;">Butter</h4>
+                <h5 style="color: white;">200gm Only Rs 40</h5>
+           <button onclick="orderBox(2)" style="left: 0px;">Add to Order</button>
+          </div> 
+           <div class="box" style="    background: linear-gradient(to left, #bbd2c5, #536976, #292e49); ">
+            <img src="assets/images/ghee.webp"  alt="">
+                <h4 style="color: white; margin-top: 5px;">Ghee</h4>
+                <h5 style="color: white;">500ml Only Rs 450</h5>
+           <button onclick="orderBox(3)" style="left: 0px;">Add to Order</button>
+          </div>  
+          <div class="box" style="    background: linear-gradient(to left, #f0c27b, #4b1248); ">
+            <img src="assets/images/cheese.jpg"  alt="">
+                <h4 style="color: white; margin-top: 5px;">Cheese Slicea</h4>
+                <h5 style="color: white;">1piece Only Rs 12</h5>
+           <button onclick="orderBox(4)" style="left: 0px;">Add to Order</button>
+          </div>  
+          <div class="box" style="   background: linear-gradient(to right, #ff8008, #ffc837); ">
+            <img src="assets/images/moz.webp"  alt="">
+                <h4 style="color: white;  margin-top: 5px;">Mozerella Cheese</h4>
+                <h5 style="color: white;">50g0m Only Rs 130</h5>
+           <button onclick="orderBox(5)" style="left: 0px;">Add to Order</button>
+          </div>
+         
+          <div style="padding: 70px;" >
+          
+          </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="add-order hide" >
+        <div class="bg" id="add-order-bg"></div>
+        <div class="box">
+            <h2 style="color: #ef1162 ; font-size: 1.3rem;">Select</h2>
+            <span style="color: rgb(0,0,0,0.5); font-size:0.8rem;">Quantity & Order Type</span> 
+            <form id="choose" style="margin-top: 15px;">
+                <div style="margin-top: 15px;">
+                    <label style="font-size: .9rem;"  >Quantity </label>
+                    <select name="">
+                        <option value="500ml">500 ml</option>
+                        <option value="1 Ltr">1 Ltr</option>
+                        <option value="1.5 ltr">1.5 ltr</option>
+                        <option value="2 ltr">2 ltr</option>
+                        <option value="3 ltr">3 ltr</option>
+                        <option value="4 ltr">4 ltr</option>
+                        <option value="5 ltr">5 ltr</option>
+                        </select> 
+                </div>
+                <div style="margin-top: 15px;">
+                    <label style="font-size: .9rem;" class="oto-text"> One Time Order</label>
+                    <input type="checkbox" class="oto">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Tomorrow's Order List* </p>
+                </div>
+                <div style="margin-top: 15px;">
+                    <label style="font-size: .9rem;" class="do1-text"> Daily Order</label>
+                    <input type="checkbox" class="do">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Daily's Order List* </p>
+                </div>
+            <button type="submit"  style="margin-top: 20px;">Confirm Order</button></form></div>
+            
+            <div class="box hide" id="add-order-box" style="height: 300px;" ><h2 style="margin-top: 10px; color: #191654; ">Thank You </h2> <p style="margin-top: 30px; font-size: 2.5rem; color:#ef1162">Order Confirmed !</p><img src="assets/images/favicon.png" height="100px" alt=""> </div>
+        
+    </div>
+
+
+    <div class="add-order hide" >
+        <div class="bg" id="add-order-bg"></div>
+        <div class="box">
+            <h2 style="color: #ef1162 ; font-size: 1.3rem;">Select </h2>
+            <span style="color: rgb(0,0,0,0.5); font-size: 0.8rem;">Quantity & Order Type</span> 
+            <form id="choose" style="margin-top: 15px;">
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;">Quantity</label>
+                    <select name="" id="" >
+                        <option value="200ml">200 ml</option>
+                        <option value="500ml">500 ml</option>
+                        <option value="1 Ltr">1 ltr</option>
+                        </select> 
+                </div>
+                <div style="margin-top: 15px;">
+                    <label style="font-size: .9rem;" class="oto-text"> One Time Order</label>
+                    <input type="checkbox"  class="oto">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Tomorrow's Order List* </p>
+                
+                </div>
+                <div style="margin-top: 15px;">
+                    <label style="font-size: .9rem;" class="do1-text"> Daily Order</label>
+                    <input type="checkbox" class="do">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Daily's Order List* </p>
+                
+                </div>
+            <button type="submit" style="margin-top: 20px;">Confirm Order</button></form></div>
+            <div class="box hide" id="add-order-box" style="height: 300px;"><h2 style="margin-top: 10px; color: #191654;">Thank You </h2> <p style="margin-top: 30px; font-size: 2.5rem; color:#ef1162">Order Confirmed !</p><img src="assets/images/favicon.png" height="100px" alt=""> </div>
+        
+    </div>
+
+    <div class="add-order hide" >
+        <div class="bg" id="add-order-bg"></div>
+        <div class="box">
+            <h2 style="color: #ef1162 ; font-size: 1.3rem;">Select </h2>
+            <span style="color: rgb(0,0,0,0.5); font-size:0.8rem;">Quantity & Order Type</span> 
+            <form id="choose" style="margin-top: 15px;">
+                <div style="margin-top: 15px;">
+                    <label for=""style="font-size: .9rem;" >Quantity</label>
+                    <select name="" id="" >
+                        <option value="200gm">200gm</option>
+                        <option value="500gm">500 gm</option>
+                        </select> 
+                </div>
+                <div style="margin-top: 15px;">
+                  
+                    <label for="" style="font-size: .9rem;" class="oto-text"> One Time Order</label>
+                    <input type="checkbox"  class="oto">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Tomorrow's Order List* </p>
+               
+                </div>
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;" class="do1-text"> Daily Order</label>
+                    <input type="checkbox" class="do">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Daily's Order List* </p>
+                
+                </div>
+            <button type="submit" style="margin-top: 20px;">Confirm Order</button></form>
+        </div>
+        <div class="box hide" id="add-order-box" style="height: 300px;"><h2 style="margin-top: 10px; color: #191654;">Thank You </h2> <p style="margin-top: 30px; font-size: 2.5rem; color:#ef1162">Order Confirmed !</p><img src="assets/images/favicon.png" height="100px" alt=""> </div>
+
+    </div>
+
+    <div class="add-order hide" >
+        <div class="bg" id="add-order-bg"></div>
+        <div class="box">
+            <h2 style="color: #ef1162 ; font-size: 1.3rem;">Select </h2>
+            <span style="color: rgb(0,0,0,0.5); font-size:0.8rem;">Quantity & Order Type</span> 
+            <form id="choose" style="margin-top: 15px;">
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;">Quantity</label>
+                    <select name="" id="" >
+                        <option value="200gm">200 gm</option>
+                        <option value="500gm">500gm</option>
+                        </select> 
+                </div>
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;"class="oto-text"> One Time Order</label>
+                    <input type="checkbox"  class="oto">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Tomorrow's Order List* </p>
+               
+                </div>
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;" class="do1-text"> Daily Order</label>
+                    <input type="checkbox" class="do">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Daily's Order List* </p>
+                
+                </div>
+            <button type="submit" style="margin-top: 20px;">Confirm Order</button></form>
+        </div>
+        <div class="box hide" id="add-order-box" style="height: 300px;"><h2 style="margin-top: 10px; color: #191654;">Thank You </h2> <p style="margin-top: 30px; font-size: 2.5rem; color:#ef1162">Order Confirmed !</p><img src="assets/images/favicon.png" height="100px" alt=""> </div>
+
+    </div>
+
+    <div class="add-order hide" >
+        <div class="bg" id="add-order-bg"></div>
+        <div class="box">
+            <h2 style="color: #ef1162 ; font-size: 1.3rem;">Select </h2>
+            <span style="color: rgb(0,0,0,0.5); font-size:0.8rem;">Quantity & Order Type</span> 
+            <form id="choose" style="margin-top: 15px;">
+                <div style="margin-top: 15px;">
+                    <label for=""style="font-size: .9rem;" >Quantity</label>
+                    <select name="" id="" >
+                        <option value="25 slice">25 slice</option>
+                        <option value="50 slice">50 slice</option>
+                        <option value="100 slice">100 slice</option>
+
+                        </select> 
+                </div>
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;"class="oto-text"> One Time Order</label>
+                    <input type="checkbox"  class="oto">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Tomorrow's Order List* </p>
+               
+                </div>
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;" class="do1-text"> Daily Order</label>
+                    <input type="checkbox" class="do">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Daily's Order List* </p>
+                
+                </div>
+            <button type="submit" style="margin-top: 20px;">Confirm Order</button></form>
+        </div>
+        <div class="box hide" id="add-order-box" style="height: 300px;" ><h2 style="margin-top: 10px; color: #191654;">Thank You </h2> <p style="margin-top: 30px; font-size: 2.5rem; color:#ef1162">Order Confirmed !</p> <img src="assets/images/favicon.png" height="100px" alt=""></div>
+
+    </div>
+    
+    <div class="add-order hide" >
+        <div class="bg" id="add-order-bg"></div>
+        <div class="box">
+            <h2 style="color: #ef1162 ; font-size: 1.3rem;">Select </h2>
+            <span style="color: rgb(0,0,0,0.5); font-size:0.8rem;">Quantity & Order Type</span> 
+            <form id="choose" style="margin-top: 15px;">
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;">Quantity</label>
+                    <select name="" id="" >
+                        <option value="200gm">200 gm</option>
+                        <option value="500gm">500 gm</option>
+                        </select> 
+                </div>
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;"class="oto-text"> One Time Order</label>
+                    <input type="checkbox"  class="oto">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Tomorrow's Order List* </p>
+               
+                </div>
+                <div style="margin-top: 15px;">
+                    <label for="" style="font-size: .9rem;" class="do1-text"> Daily Order</label>
+                    <input type="checkbox" class="do">
+                    <p style="color: rgb(0,0,0,0.5); font-size: 0.8rem; padding: 3px;">Add's to Daily's Order List* </p>
+                
+                </div>
+            <button type="submit" style="margin-top: 20px;">Confirm Order</button></form>
+        </div>
+        <div class="box hide" id="add-order-box" style="height: 300px;"><h2 style="margin-top: 10px; color: #191654;">Thank You </h2> <p style="margin-top: 30px; font-size: 2.5rem; color:#ef1162">Order Confirmed !</p> <img src="assets/images/favicon.png" height="100px" alt=""></div>
+
+
+    </div>
+
+<!-- 
+    <div class="about hide Tab" id="about">
+        THIS PAGE IS ABOUT
+    </div> -->
+
+    <div class="nav-footer none" id="navFooter">
+        <div  onclick="showTab(0)">
+            <i class="fa-solid fa-house"></i>
+            <p>Home</p>
+        </div>
+        <div  onclick="showTab(1)">
+        <i class="fa-brands fa-product-hunt"></i>
+            <p>Products</p>
+        </div>
+       
+        <!-- <div  onclick="showTab(2)">
+            <i class="fa-solid fa-user"></i>
+            <p>Profile</p>
+        </div> -->
+        <div  onClick="window.location.reload()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <p>Logout</p>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        const tList=document.querySelector("#t-list"),
+              tedit=document.querySelector(".t-list-edit"),
+              dedit=document.querySelector(".d-list-edit"),
+              pedit=document.querySelector(".p-edit"),
+
+              dList=document.querySelector("#d-list");
+
+        const obj=[{name:"Milk",img:"assets/images/milk-bottle.png"},{name:"Curd",img:"assets/images/curd icon.jpg" },{name:"Butter",img:"assets/images/butter.png" },{name:"Ghee",img:"assets/images/ghee icon.jpg" },{name:"Cheese",img:"assets/images/cheese-slice.png" },{name:"Mozerella",img:"assets/images/mozerella icon.jpg" }]
+ const qinc=[{milk:["500 ml","1 Ltr","1.5 ltr","2 ltr","3 ltr","4 ltr","5 ltr"]},{curd:["200 ml","500 ml","1 Ltr"]},{butter:["200 gm","500 gm"]},{ghee:["200 gm","500 gm"]},{cheese:["25 slice","50 slice","100 slice"]},{mozerella:["200 gm","500 gm"]}];
+        const ChooseMobile=document.querySelector("#chooseMobile"),
+            chooseNumber=document.querySelector("#chooseNumber"),
+            chooseNumberBg=document.querySelector("#chooseNumberBg"),
+            loginButton=document.querySelector("#loginButton"),
+            verifyOtp=document.querySelector("#verifyOtp"),
+            verify=document.querySelector("#verify"),
+            login=document.querySelector("#login"),
+            home=document.querySelector("#home"),
+            product=document.querySelector("#product"),
+            about=document.querySelector("#about"),
+            Tab=document.querySelectorAll(".Tab"),
+            navFooter=document.querySelector("#navFooter"),
+            err=document.querySelector(".err"),
+            err1=document.querySelector(".err1");
+
+        function orderBox(index){
+            let addOrder=document.querySelectorAll(".add-order")[index];
+            let addOrderBg=document.querySelectorAll("#add-order-bg")[index];
+            let form=document.querySelectorAll("#choose")[index];
+            let addOrderBox=document.querySelectorAll("#add-order-box")[index];
+            addOrder.classList.remove("hide");
+            form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let qSelect=document.querySelectorAll("select")[index].value,
+                oto=document.querySelectorAll(".oto")[index].checked,
+                do1=document.querySelectorAll(".do")[index].checked;
+                otov=document.querySelectorAll(".oto")[index],
+                do1v=document.querySelectorAll(".do")[index];
+            
+          
+             
+            let trDiv=document.createElement("div"),
+            h2=document.createElement("h2"),
+            h3=document.createElement("h3"),
+
+            icon=document.createElement("img");
+            
+            trDiv.classList.add("tr");
+            trDiv.appendChild(h2);
+            trDiv.appendChild(h3);
+            trDiv.appendChild(icon);
+            h2.innerText=obj[index].name;
+            h3.innerHTML=qSelect;
+            icon.src=obj[index].img;
+        
+          
+           
+
+            let otoText=document.querySelectorAll(".oto-text")[index],
+                    do1Text=document.querySelectorAll(".do1-text")[index];
+                  
+            if(oto==0 && do1==0){
+                otoText.innerHTML="One Time Order*";
+                do1Text.innerHTML="Daily order*";
+                otoText.style.color="red";
+                do1Text.style.color="red";
+                otov.addEventListener('change',()=>{
+                    let rev= revert(); 
+  
+                })
+                do1v.addEventListener('change',()=>{
+                    let rev= revert(); 
+
+                })
+            }else if(oto=1 && do1==0){
+            
+            tList.appendChild(trDiv);
+            trDiv.classList.add("ttr");
+            h3.classList.add("qty");
+            h2.classList.add("item");
+            let oc=orderConfirm();
+            }else if(oto=0 && do1==1){
+
+            dList.appendChild(trDiv);
+            trDiv.classList.add("dtr");
+            let oc=orderConfirm();
+            }else{
+            
+            tList.appendChild(trDiv);
+            trDiv.classList.add("ttr");
+            let oc=orderConfirm();
+            }
+            if(oto=1 && do1==1){
+                
+            let trDiv=document.createElement("div"),
+            h2=document.createElement("h2"),
+            h3=document.createElement("h3"),
+            icon=document.createElement("img");
+            h3.classList.add("qty");
+            h2.classList.add("item");
+
+            trDiv.classList.add("tr");
+            trDiv.appendChild(h2);
+            trDiv.appendChild(h3);
+            trDiv.appendChild(icon);
+            h2.innerText=obj[index].name;
+            h3.innerHTML=qSelect;
+            icon.src=obj[index].img;
+        
+                dList.appendChild(trDiv);
+            trDiv.classList.add("dtr");
+                let oc=orderConfirm();
+            }
+
+
+            })
+
+
+            addOrderBg.addEventListener("click",()=>{
+            addOrder.classList.add("hide");
+            addOrderBox.classList.add("hide");
+            })
+            function orderConfirm(){
+            addOrderBox.classList.remove("hide");
+            setTimeout(()=>{
+                addOrderBox.classList.add("hide");
+            addOrder.classList.add("hide");
+
+            },800)
+            }
+            function revert(){
+                let otoText=document.querySelectorAll(".oto-text")[index],
+                    do1Text=document.querySelectorAll(".do1-text")[index];
+                otoText.innerHTML="One Time Order";
+                do1Text.innerHTML="Daily order";
+                otoText.style.color="black";
+                do1Text.style.color="black";
+            }
+
+        }
+
+        let pinput=document.querySelectorAll(".p-input");
+        let pcolor=document.querySelectorAll(".pcolor");
+        let hname=document.querySelector(".hname");
+        pedit.addEventListener("click",()=>{
+            if(pedit.innerHTML=="Edit"){
+                pedit.innerHTML="Save";
+                pinput.forEach((item,index)=>{
+                    item.removeAttribute("readonly");
+                    item.style.color="blue";
+                })
+
+                pcolor.forEach((item,index)=>{
+                    item.style.background="white";
+                    item.style.border="1px solid black";
+
+                    
+                })
+                hname.innerHTML=pinput[0].value;
+                 }else{
+                pedit.innerHTML="Edit";
+                pinput.forEach((item,index)=>{
+                    item.setAttribute("readonly","readonly");
+                    item.style.color="white";
+                
+
+                })
+                pcolor.forEach((item,index)=>{
+                    item.style.background="linear-gradient(to left, #fcdb88, #f8b500)";
+                    item.style.border="none";
+
+                hname.innerHTML=pinput[0].value;
+                    
+                })
+                 }
+
+           })
+            
+tedit.addEventListener("click",()=>{
+
+    if(tedit.innerHTML=="Edit Order"){
+
+    let   ttr=document.querySelectorAll(".ttr");
+    ttr.forEach((item,index)=>{
+
+    tedit.innerHTML="Save";
+      let  span=document.createElement("span"),
+           label=document.createElement("label"),
+             del=document.createElement("img");
+             span.classList.add("span");
+             label.classList.add("label");
+             del.classList.add("img1");
+
+             del.src="assets/images/remove.png";
+            del.style.padding="5px";
+            del.style.cursor="pointer";
+            span.innerHTML="-";
+            label.innerHTML="+";
+        item.appendChild(span);
+        item.appendChild(label);
+        item.appendChild(del);
+        del.addEventListener("click",()=>{
+            item.style.display="none";
+         })
+         
+         let i=inc();
+
+    })
+}else{
+    tedit.innerHTML="Edit Order";
+    let s=save();
+}
+})
+
+
+
+
+function save(){
+    let span1=document.querySelectorAll(".span");
+             let label1=document.querySelectorAll(".label");
+             let img1=document.querySelectorAll(".img1");
+
+    
+            span1.forEach((item,index)=>{
+                item.style.display="none";
+            })
+            label1.forEach((item,index)=>{
+                item.style.display="none";
+            })
+            img1.forEach((item,index)=>{
+                item.style.display="none";
+            })
+}
+
+function inc(){
+    
+    let span1=document.querySelectorAll(".span");
+    let label1=document.querySelectorAll(".label");
+    let qty=document.querySelectorAll(".qty");
+    let nameItem=document.querySelectorAll(".item");
+
+
+          
+           
+           
+           
+             span1.forEach((item,index)=>{
+                item.addEventListener("click",()=>{
+                        let val=nameItem[index].innerHTML; 
+                        if(val=="Milk"){
+
+                            
+                        
+                            qty[index].innerHTML=qinc[index].milk[index];
+                           
+                      
+                    }if(val=="Curd"){
+                        qty[index].innerHTML="red";
+
+                    }
+                    })
+                    
+
+            })
+            
+            label1.forEach((item,index)=>{
+                item.addEventListener("click",()=>{
+        
+
+                })
+            })
+}
+   
+
+
+ 
+
+            
+dedit.addEventListener("click",()=>{
+
+if(dedit.innerHTML=="Edit Order"){
+
+let   dtr=document.querySelectorAll(".dtr");
+dtr.forEach((item,index)=>{
+
+dedit.innerHTML="Save";
+  let  span=document.createElement("span"),
+       label=document.createElement("label"),
+         del=document.createElement("img");
+         span.classList.add("span");
+         label.classList.add("label");
+         del.classList.add("img1");
+
+         del.src="assets/images/remove.png";
+        del.style.padding="5px";
+        del.style.cursor="pointer";
+        span.innerHTML="+";
+        label.innerHTML="-";
+    item.appendChild(span);
+    item.appendChild(label);
+    item.appendChild(del);
+    del.addEventListener("click",()=>{
+        item.style.display="none";
+     })
+     let i=inc();
+     
+})
+}else{
+dedit.innerHTML="Edit Order";
+let s=save();
+}
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function homeBox(index){
+            let homeBox=document.querySelectorAll(".home-box")[index];
+            let homeBoxBg=document.querySelectorAll("#home-box-bg")[index];
+
+          
+            homeBox.classList.toggle("hide");
+
+            homeBoxBg.addEventListener("click",()=>{
+            homeBox.classList.add("hide");
+            })
+
+            setTimeout(()=>{
+                homeBox.classList.add("hide");
+
+
+
+            },800)
+
+        }
+
+
+
+
+        function showTab(index){
+            Tab.forEach(function(node){
+                node.style.display="none";
+            })
+            Tab[index].style.display="block";
+        }
+
+    
+
+
+
+
+
+        ChooseMobile.addEventListener('click',()=>{
+            chooseNumber.classList.toggle("hide");
+        })
+        chooseNumberBg.addEventListener('click',()=>{
+            chooseNumber.classList.toggle("hide");
+        })
+        verify.addEventListener('submit',(e)=>{
+            
+            y=document.querySelector("#votp").value,
+            
+            e.preventDefault();
+
+                if(y==""||y==null){
+                    err1.innerHTML="please enter value";
+                }else if(y.length!=4)
+                {
+                err1.innerHTML="OTP must be  4 character";
+                }
+                else{
+                    err1.innerHTML="";
+                    verifyOtp.classList.toggle("hide");
+                    chooseNumber.classList.toggle("hide");
+                    login.classList.toggle("flex");
+                    home.classList.toggle("hide");
+                    navFooter.classList.toggle("none");
+                    
+                }
+
+        })
+        loginButton.addEventListener('submit',(e)=>{
+            
+            x=document.querySelector("#mno").value,
+          
+            e.preventDefault();
+
+                if(x==""||x==null){
+                    err.innerHTML="please enter value";
+                }else if(x.length!=10)
+                {
+                err.innerHTML="Mobile No must be  10 character";
+                }
+                else{
+                    err.innerHTML="";
+                    verifyOtp.classList.toggle("hide");
+                    
+                }
+
+        })
+        verify.addEventListener('click',()=>{
+           
+        })
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        document.body.onload=()=>
+        {
+   
+        setTimeout(function ()
+            {
+            let pre=document.querySelector(".pre-loader"),
+                login=document.querySelector(".login");
+                pre.classList.add("hide");
+                login.classList.add("opac");
+
+            
+            },2000)
+        }
+    </script>
+</body>
+</html>

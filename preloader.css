@@ -1,0 +1,56 @@
+.pre-loader{
+    background-color: #ddefe2;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* @keyframes pre-loader {
+100%{
+    left:-100%;
+}
+
+} */
+.pre-loader img{
+transform: translate(-50%,-50%);
+top:50%;
+left:50%;
+position: absolute;
+/* animation: pre-loader 2s linear; */
+
+}
+.pre-loader p{
+color: #8dccf2;
+font-size: 3rem;
+font-family: 'Kaushan Script', cursive;
+display: flex;
+flex: column;
+justify-content: center;
+margin-top: 23vh;
+animation: pre-slide 500ms linear;
+}
+
+
+@keyframes pre-slide {
+0%{
+transform: translatex(-100px);
+opacity: 0;
+}
+100%{
+transform: translatex(0);
+}
+}
+
+.opac{
+    animation: opac 1s linear;
+}
+@keyframes opac {
+    0%{
+        opacity: 30%;
+    }
+    100%{
+        opacity: 100;
+    }        
+}
