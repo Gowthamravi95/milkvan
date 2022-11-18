@@ -24,6 +24,7 @@
 
 
 <style>
+    
    .home,.product{
     width: 100vw;
     height: auto;
@@ -65,15 +66,19 @@ font-size: 1.3rem;
         padding: 20px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
        position: relative;
+       background-color: white;
     }
     
      .box h3{
         font-size: 0.8rem;
-        color: white;
+        color: rgb(0,0,0,0.7);
     }
      .box h2{
         font-size: 1rem;
-        color: white;
+        color: rgb(0,0,0,0.7);
+        color:#ec008c;
+
+
     }
      .box button{
         all: unset;
@@ -122,13 +127,15 @@ font-size: 1.3rem;
         height:30px;
         margin-top: 15px;
         align-items: center;
-        background: linear-gradient(to left, #fcdb88, #f8b500);
         padding: 20px;
         position: relative;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.2);
      }
      .tr h2{
         position: absolute;
         left: 10px;
+        color:rgb(0,0,0,0.8);
      }
      .tr span{
         position: absolute;
@@ -206,14 +213,17 @@ cursor: pointer;
 
 .due{
     font-size: 2rem;
-    color:white; 
     font-weight: 500;
     margin: 10px 0;
     padding: 10px;
     border-radius: 40px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 
-    background: linear-gradient(to left, #fceabb, #f8b500)
     
+}
+.pay:hover{
+    color: #ec008c;
 }
 
 /* select{
@@ -225,7 +235,7 @@ cursor: pointer;
 </style>
 </head>
 <body>
-    <div class="pre-loader    ">
+    <div class="pre-loader  ">
         <p>Milk Van</p>
         <img src="assets/images/milk-truck-just-arrive.gif" width="250px" alt="">
     </div>
@@ -336,8 +346,8 @@ cursor: pointer;
 
         <div class="header">
             <div>
-                <h2> Welcome </h2>
-                <h1> <span>Back,</span>  <span class="hname" style="color: #2f80ed;">Murugan</span>!</h1>
+                <h2> Welcome Back, </h2>
+                <h1>  <span class="hname" style="color: #2f80ed;">Murugan</span>!</h1>
             
             </div>
             <!-- <div class="header-inner">
@@ -349,44 +359,44 @@ cursor: pointer;
         </div>
         
         <div class="box-grid">
-            <div class="box" style="background: linear-gradient(to right, #5f2c82, #49a09d);">
+            <div class="box"  >
                  <h2>Due Balance</h2>
-                <p class="due" > <i class="fa-solid fa-indian-rupee-sign" style="font-size: 1.5rem;"></i> 1544 <i class="fa-solid fa-wallet" style="background: linear-gradient(to right, #56ccf2, #2f80ed); font-size: 1.5rem;  padding: 10px; border-radius: 50%; margin-left: 70px;"></i></p>
+                <p class="due" > <i class="fa-solid fa-indian-rupee-sign" style="font-size: 1.5rem;"></i> <span class="amt">1544</span> <i class="fa-solid fa-wallet" style="background: linear-gradient(to right, #56ccf2, #2f80ed); font-size: 1.5rem;  padding: 10px; border-radius: 50%; margin-left: 70px;  color:white;"></i></p>
                 <h3 >Above balance is due from your last paid day*</h3>
-                <button >Clear Due</button>
+                <button class="cdue" onclick="homeBox(1)" >Clear Due</button>
             </div>
-            <div class="box" style=" background: linear-gradient(to left, #00c9ff, #92fe9d); " >
+            <div class="box" >
                 <h2>Profile</h2>
                 <div class="tr pcolor" >
-                    <input type="text" class="p-input" value="Murugan" readonly="readonly" style="all: unset; color: white;"> 
+                    <input type="text" class="p-input" value="Murugan" readonly="readonly" style="all: unset; "> 
                     <img src="assets/images/user.png"  alt="">
 
                </div>
                <div class="tr  pcolor" >
-                <input type="text" class="p-input" value="84587 99844" readonly="readonly" style="all: unset; color: white;"> 
+                <input type="text" class="p-input" value="84587 99844" readonly="readonly" style="all: unset; "> 
                 <img src="assets/images/phone-call.png"  alt="">
                  </div>
                  <div class="tr  pcolor"style="height: 100px;" >
-                <textarea class="p-input" name="" id="" style="all: unset; color:white;" readonly="readonly" cols="12" rows="4">No.4,3rd cross street,  Ambal nagar, vadapalani, chennai -98</textarea>
+                <textarea class="p-input" name="" id="" style="all: unset; ;overflow: hidden;width: 100%;" readonly="readonly"  rows="4">No.4,3rd cross street,  Ambal nagar, vadapalani, chennai -98</textarea>
             <img src="assets/images/placeholder.png" style="top: -9px"  alt="">
 
                 </div>
                 <button class="p-edit">Edit</button>  
             </div>
-            <div class="box"  style="background: linear-gradient(to right, #fc354c, #0abfbc); ">
+            <div class="box"  >
                 <h2>Complaint Or Feedback</h2>
                 <div style="margin-top: 20px;">
-                    <input type="text" placeholder="Subject" style="padding: 10px; width: 100%;margin-bottom: 5px; font-size: 1rem;" >
+                    <input type="text" placeholder="Subject"  style="padding: 10px; width: 100%;margin-bottom: 5px; font-size: 1rem;" >
                     
-                    <textarea name="" id="" cols="18" rows="5" placeholder="Describe Your Subject" style="padding: 5px;"></textarea></div>
-                    <div class="tr" style="background: #191654;cursor: pointer;" >
+                    <textarea name="" id=""  rows="5" placeholder="Describe Your Subject" style="padding: 5px;width: 100%;"></textarea></div>
+                    <div class="tr"  >
                         <h2>Contact us now</h2>
             <img src="assets/images/contact.png"  alt="">
 
                          </div>
                 <button onclick="homeBox(0)" >Submit</button>
             </div>
-            <div class="box"  style=" background: linear-gradient(to left, #24c6dc, #514a9d); ">
+            <div class="box" >
                 <h2> Tomorrow's Delivery</h2>
                
                 <div id="t-list">
@@ -406,7 +416,7 @@ cursor: pointer;
                 </div>
                 <button class="t-list-edit" >Edit Order</button>
             </div>
-            <div class="box"  style="  background: linear-gradient(to right, #ef32d9, #89fffd); ">
+            <div class="box"  >
                 <h2>Daily Orders</h2>
                 <div id="d-list">
                     <div class="tr dtr" >
@@ -424,7 +434,7 @@ cursor: pointer;
                 </div>
                 <button class="d-list-edit">Edit Order</button>  
             </div>
-            <div class="box" style="background: linear-gradient(to left, #9d50bb, #6e48aa); " >
+            <div class="box" >
                 <h2>Monthly Report</h2>
                 <div class="tr" >
                     <h2>Milk</h2>
@@ -456,6 +466,38 @@ cursor: pointer;
     <div class="home-box hide" >
         <div class="bg" id="home-box-bg"></div>
             <div class="box "  ><h2 style="margin-top: 15px;color: #191654;" >Thank for Feedback </h2> <p style="margin-top: 50px; font-size: 2.5rem; color:#ef1162"> Submitted !</p> </div>
+        </div>
+    </div>
+    <div class="home-box hide" >
+        <div class="bg" id="home-box-bg"></div>
+            <div class="box "  ><h2 style="margin-top: 15px;color: #191654;" >Choose UPI Option </h2> 
+                <div style=" margin: 30px;">
+                    <div class="pay" onclick="homeBox(2)" style="display: flex;gap:30px;align-items: center;cursor: pointer; ">
+                        <img src="assets/images/phonpe.png" width="30px" alt="">
+                        <p>Phonepe</p>
+                    </div>
+                    <div class="pay"  onclick="homeBox(2)" style="display: flex;gap:30px;align-items: center; margin: 15px 0 ;cursor: pointer; ">
+                        <img src="assets/images/g-pay1.jpg" width="30px" alt="">
+                        <p>Google Pay</p>
+                    </div><div class="pay" onclick="homeBox(2)" style="display: flex;gap:30px;align-items: center;cursor: pointer; ">
+                        <img src="assets/images/Paytm_logo.png" width="30px" alt="">
+                        <p>Paytm UPI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-box hide" >
+        <div class="bg" id="home-box-bg"></div>
+            <div class="box " style="display: flex;align-items: center;justify-content: center;" ><h2 style="color: rgb(0,0,0,0.8); font-size: 1.2rem" >Request for payment sent to your mobile App </h2> 
+             </div>
+        </div>
+    </div>
+    <div class="home-box hide" >
+        <div class="bg" id="home-box-bg"></div>
+            <div class="box "  > <p style="margin-top: 20px; font-size: 2.5rem; color:#ef1162"> Payment Received</p> 
+                <img src="assets/images/favicon.png" height="100px" alt="">
+            </div>
         </div>
     </div>
 
@@ -740,6 +782,7 @@ cursor: pointer;
               tedit=document.querySelector(".t-list-edit"),
               dedit=document.querySelector(".d-list-edit"),
               pedit=document.querySelector(".p-edit"),
+              cdue=document.querySelector(".cdue"),
 
               dList=document.querySelector("#d-list");
 
@@ -889,7 +932,7 @@ cursor: pointer;
 
                 pcolor.forEach((item,index)=>{
                     item.style.background="white";
-                    item.style.border="1px solid black";
+                    item.style.border="1px solid blue";
 
                     
                 })
@@ -898,13 +941,12 @@ cursor: pointer;
                 pedit.innerHTML="Edit";
                 pinput.forEach((item,index)=>{
                     item.setAttribute("readonly","readonly");
-                    item.style.color="white";
+                    item.style.color=" rgba(0, 0, 0, 0.8)";
                 
 
                 })
                 pcolor.forEach((item,index)=>{
-                    item.style.background="linear-gradient(to left, #fcdb88, #f8b500)";
-                    item.style.border="none";
+                    item.style.border="1px solid rgba(0, 0, 0, 0.2)";
 
                 hname.innerHTML=pinput[0].value;
                     
@@ -921,26 +963,26 @@ tedit.addEventListener("click",()=>{
     ttr.forEach((item,index)=>{
 
     tedit.innerHTML="Save";
-      let  span=document.createElement("span"),
-           label=document.createElement("label"),
-             del=document.createElement("img");
-             span.classList.add("span");
-             label.classList.add("label");
+    //   let  span=document.createElement("span"),
+        //    label=document.createElement("label"),
+            let del=document.createElement("img");
+            //  span.classList.add("span");
+            //  label.classList.add("label");
              del.classList.add("img1");
 
              del.src="assets/images/remove.png";
             del.style.padding="5px";
             del.style.cursor="pointer";
-            span.innerHTML="-";
-            label.innerHTML="+";
-        item.appendChild(span);
-        item.appendChild(label);
+            // span.innerHTML="-";
+            // label.innerHTML="+";
+        // item.appendChild(span);
+        // item.appendChild(label);
         item.appendChild(del);
         del.addEventListener("click",()=>{
             item.style.display="none";
          })
          
-         let i=inc();
+        //  let i=inc();
 
     })
 }else{
@@ -953,60 +995,60 @@ tedit.addEventListener("click",()=>{
 
 
 function save(){
-    let span1=document.querySelectorAll(".span");
-             let label1=document.querySelectorAll(".label");
+    // let span1=document.querySelectorAll(".span");
+            //  let label1=document.querySelectorAll(".label");
              let img1=document.querySelectorAll(".img1");
 
     
-            span1.forEach((item,index)=>{
-                item.style.display="none";
-            })
-            label1.forEach((item,index)=>{
-                item.style.display="none";
-            })
+            // span1.forEach((item,index)=>{
+            //     item.style.display="none";
+            // })
+            // label1.forEach((item,index)=>{
+            //     item.style.display="none";
+            // })
             img1.forEach((item,index)=>{
                 item.style.display="none";
             })
 }
 
-function inc(){
+// function inc(){
     
-    let span1=document.querySelectorAll(".span");
-    let label1=document.querySelectorAll(".label");
-    let qty=document.querySelectorAll(".qty");
-    let nameItem=document.querySelectorAll(".item");
+//     let span1=document.querySelectorAll(".span");
+//     let label1=document.querySelectorAll(".label");
+//     let qty=document.querySelectorAll(".qty");
+//     let nameItem=document.querySelectorAll(".item");
 
 
           
            
            
            
-             span1.forEach((item,index)=>{
-                item.addEventListener("click",()=>{
-                        let val=nameItem[index].innerHTML; 
-                        if(val=="Milk"){
+//              span1.forEach((item,index)=>{
+//                 item.addEventListener("click",()=>{
+//                         let val=nameItem[index].innerHTML; 
+//                         if(val=="Milk"){
 
                             
                         
-                            qty[index].innerHTML=qinc[index].milk[index];
+//                             qty[index].innerHTML=qinc[index].milk[index];
                            
                       
-                    }if(val=="Curd"){
-                        qty[index].innerHTML="red";
+//                     }if(val=="Curd"){
+//                         qty[index].innerHTML="red";
 
-                    }
-                    })
+//                     }
+//                     })
                     
 
-            })
+//             })
             
-            label1.forEach((item,index)=>{
-                item.addEventListener("click",()=>{
+//             label1.forEach((item,index)=>{
+//                 item.addEventListener("click",()=>{
         
 
-                })
-            })
-}
+//                 })
+//             })
+// }
    
 
 
@@ -1021,25 +1063,25 @@ let   dtr=document.querySelectorAll(".dtr");
 dtr.forEach((item,index)=>{
 
 dedit.innerHTML="Save";
-  let  span=document.createElement("span"),
-       label=document.createElement("label"),
-         del=document.createElement("img");
-         span.classList.add("span");
-         label.classList.add("label");
+//   let  span=document.createElement("span"),
+    //    label=document.createElement("label"),
+       let   del=document.createElement("img");
+        //  span.classList.add("span");
+        //  label.classList.add("label");
          del.classList.add("img1");
 
          del.src="assets/images/remove.png";
         del.style.padding="5px";
         del.style.cursor="pointer";
-        span.innerHTML="+";
-        label.innerHTML="-";
-    item.appendChild(span);
-    item.appendChild(label);
+        // span.innerHTML="+";
+        // label.innerHTML="-";
+    // item.appendChild(span);
+    // item.appendChild(label);
     item.appendChild(del);
     del.addEventListener("click",()=>{
         item.style.display="none";
      })
-     let i=inc();
+    //  let i=inc();
      
 })
 }else{
@@ -1059,10 +1101,10 @@ let s=save();
 
 
 
-
         function homeBox(index){
             let homeBox=document.querySelectorAll(".home-box")[index];
             let homeBoxBg=document.querySelectorAll("#home-box-bg")[index];
+            let homeBox1=document.querySelectorAll(".home-box");
 
           
             homeBox.classList.toggle("hide");
@@ -1071,15 +1113,27 @@ let s=save();
             homeBox.classList.add("hide");
             })
 
+           if(index==0){
             setTimeout(()=>{
                 homeBox.classList.add("hide");
-
-
-
             },800)
+           }else if(index==2){
 
+            setTimeout(()=>{
+            homeBox1[3].classList.remove("hide");
+            },1000)
+            setTimeout(()=>{
+            homeBox1[3].classList.add("hide");
+            homeBox1[2].classList.add("hide");
+            homeBox1[1].classList.add("hide");
+            
+            let amt=document.querySelector(".amt").innerHTML="0";
+                console.log(amt);
+
+            },2000)
+           }
+          
         }
-
 
 
 
